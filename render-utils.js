@@ -22,7 +22,7 @@ export function renderPost(post) {
 export function renderComment(comment) {
     const li = document.createElement('li');
 
-    li.textContent = comment.text;
+    li.textContent = comment.content;
 
     return li;
 }
