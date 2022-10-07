@@ -13,7 +13,7 @@
 
     <!-- js -->
     <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-    <script type="module" src="app.js"></script>
+    <script type="module" src="post.js"></script>
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,24 +41,24 @@
     </header>
 
     <main>
-        <form id="create-post">
+        <form id="post-form">
             <label>
                 <div>Subject</div>
                 <input name="subject" required placeholder="Subject">
             </label>
             <label>
                 <div>Post</div>
-                <textarea name="Post" required placeholder="Write your post here..."></textarea>
+                <textarea name="content" required placeholder="Write your post here..."></textarea>
             </label>
             <label>
                 <div>Image Upload</div>
-                <input id="image-input" name="image" type="file" required placeholder="upload image">
+                <input id="image-input" name="image" type="file" placeholder="upload image">
             </label>
+            <div>
+                <img id="preview" class="preview" src="/assets/image placeholder.jpeg">
+            </div>
+            <button>Publish Post</button>    
         </form>
-        <div>
-        <img id="preview" class="preview" src="/assets/image placeholder.jpeg">
-        </div>
-        <button>Publish Post</button>    
 
 
     </main>
