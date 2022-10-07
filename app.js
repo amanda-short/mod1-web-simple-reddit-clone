@@ -4,8 +4,8 @@ import './auth/user.js';
 
 /* Get DOM Elements */
 const getPost = document.getElementById('post-list');
-const getComment = doument.getElementById('comment-list');
-const errorDisplay = document.getElementById('error-display')
+const getComment = document.getElementById('comment-list');
+const errorDisplay = document.getElementById('error-display');
 
 /* State */
 let error = null;
