@@ -31,8 +31,12 @@ export async function createPost(post) {
     return await client.from('post').insert(post);
 }
 
-export async function getPost() {
+export async function getPosts() {
     return await client.from('post').select('*');
+}
+
+export async function getPost(id) {
+    return await client.from('post').select('*').eq('id', id).single();
 }
 
 

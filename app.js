@@ -1,22 +1,22 @@
 /* Imports */
 // this will check if we have a user and set signout link if it exists
 import './auth/user.js';
-import { getPost } from '/fetch-utils.js';
+import { getPosts } from '/fetch-utils.js';
 import { renderPost } from '/render-utils.js';
 
 /* Get DOM Elements */
 const postList = document.getElementById('post-list');
-const getComment = document.getElementById('comment-list');
+// const getComment = document.getElementById('comment-list');
 const errorDisplay = document.getElementById('error-display');
 
 /* State */
 let error = null;
 let posts = [];
-let comment = [];
-console.log('post');
+// let comment = [];
+
 /* Events */
 window.addEventListener('load', async () => {
-    const response = await getPost();
+    const response = await getPosts();
     error = response.error;
     posts = response.data;
 
@@ -25,7 +25,7 @@ window.addEventListener('load', async () => {
     }
 
     if (posts) {
-        displayPost();
+        displayPosts();
     }
 });
 
@@ -39,7 +39,7 @@ function displayError() {
     }
 }
 
-function displayPost() {
+function displayPosts() {
     postList.innerHTML = '';
 
     for (const post of posts) {

@@ -2,7 +2,7 @@ export function renderPost(post) {
     const li = document.createElement('li');
 
     const a = document.createElement('a');
-    a.href = `/post/?id=${post.id}`;
+    a.href = `/comment/?id=${post.id}`;
 
     // const img = document.createElement('img');
     // img.src = pet.image_url;

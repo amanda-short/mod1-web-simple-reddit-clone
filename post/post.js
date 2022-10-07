@@ -36,7 +36,6 @@ postForm.addEventListener('submit', async (e) => {
     };
     
     const response = await createPost(post);
-    console.log(response);
     error = response.error;
 
     if (error) {
