@@ -13,7 +13,7 @@
 
     <!-- js -->
     <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-    <script type="module" src="app.js"></script>
+    <script type="module" src="comment.js"></script>
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,14 +39,21 @@
             <a id="sign-out-link" href="auth">Sign Out</a>
         </nav>
     </header>
+        <main>
+            <section class="post">
+                <h1 id="post-subject">Subject</h1>
+                <img id="post-image" alt="post image" src="../assets/pet-photo-placeholder.png">
+                <p id="post-content">Hello world</p>
+            </section>
+    
+            <p id="error-display" class="error"></p>
+            <div>
+                <form id="add-comment-form" class="inline">
+                    <input name="text" placeholder="add a comment...">
+                    <button>Add</button>
+                </form>
+                <ul id="comment-list"></ul>
+            </div>
+        </main>
 
-    <main>
-        <p id="error-display" class="error"></p>
-        <ul id="post-list">
-            
-        </ul>
-    </main>
 
-</body>
-
-</html>
