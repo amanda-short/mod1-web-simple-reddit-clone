@@ -5,7 +5,6 @@ import { createPost } from '../fetch-utils.js';
 const postForm = document.getElementById('post-form');
 const errorDisplay = document.getElementById('error-display');
 // const imageInput = document.getElementById('image-input');
-const preview = document.getElementById('preview');
 
 /* State */
 let error = null;

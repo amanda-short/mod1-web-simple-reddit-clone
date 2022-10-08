@@ -19,8 +19,7 @@ window.addEventListener('load', async () => {
     const response = await getPost(id);
     error = response.error;
     post = response.data;
-    console.log('line22',post.comment);
-
+    
     if (error) {
         displayError();
     }
@@ -50,7 +49,6 @@ addCommentForm.addEventListener('submit', async (e) => {
     } else {
         addCommentForm.reset();
         post.comment.unshift(comment);
-        console.log(post.comment);
         displayComments();
     }
 });
@@ -58,7 +56,6 @@ addCommentForm.addEventListener('submit', async (e) => {
 //display functions//
 function displayError() {
     if (error) {
-        // console.log(error);
         errorDisplay.textContent = error.message;
     } else {
         errorDisplay.textContent = '';
